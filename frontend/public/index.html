@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#2d1f1a" />
+    <meta name="description" content="Ornamentação — Decoração premium de eventos em Moçambique. Casamentos, batizados, aniversários e muito mais." />
+    <meta property="og:title" content="Ornamentação | Decoração Premium de Eventos" />
+    <meta property="og:description" content="Transformamos os seus momentos especiais em memórias inesquecíveis." />
+    <meta property="og:type" content="website" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>Ornamentação | Decoração Premium de Eventos</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet" />
+
+    <style>
+      /* Prevent FOUC */
+      body { opacity: 0; transition: opacity 0.3s ease; }
+      body.loaded { opacity: 1; }
+    </style>
+  </head>
+  <body>
+    <noscript>Precisa de activar o JavaScript para usar esta aplicação.</noscript>
+    <div id="root"></div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        document.body.classList.add('loaded');
+      });
+    </script>
+  </body>
+</html>

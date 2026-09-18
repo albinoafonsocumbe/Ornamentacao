@@ -1,0 +1,378 @@
+/* ═══════════════════════════════════════════════
+   CONTACTO.CSS
+═══════════════════════════════════════════════ */
+
+/* ── LAYOUT ── */
+.contacto-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto 6rem;
+    padding: 4rem 2rem 0;
+    align-items: start;
+}
+
+/* ── PAINEL INFO (esquerda) ── */
+.contacto-info {
+    position: sticky;
+    top: 100px;
+}
+
+.contacto-info-titulo {
+    margin-bottom: 2rem;
+}
+
+.contacto-info-titulo p.label-rosa {
+    margin-bottom: 0.8rem;
+}
+
+.contacto-info-titulo h2 {
+    font-size: 1.9rem;
+    color: var(--castanho, #2d1f1a);
+    line-height: 1.2;
+    margin-bottom: 0.8rem;
+}
+
+.contacto-info-titulo p:last-child {
+    color: var(--castanho-suave, #8b6555);
+    font-size: 0.92rem;
+    line-height: 1.8;
+}
+
+.contacto-detalhes {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.contacto-detalhe {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.2rem;
+    background: var(--branco, #ffffff);
+    border: 1px solid rgba(232,212,196,0.5);
+    border-radius: 14px;
+    transition: all 0.25s ease;
+}
+
+.contacto-detalhe:hover {
+    border-color: rgba(201,133,122,0.3);
+    box-shadow: 0 4px 16px rgba(201,133,122,0.08);
+    transform: translateX(4px);
+}
+
+.contacto-detalhe-icon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    background: linear-gradient(135deg, rgba(201,133,122,0.12), rgba(138,158,133,0.08));
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--rosa, #c9857a);
+    border: 1px solid rgba(201,133,122,0.15);
+}
+
+.contacto-detalhe-texto strong {
+    display: block;
+    color: var(--castanho, #2d1f1a);
+    font-size: 0.85rem;
+    margin-bottom: 0.2rem;
+}
+
+.contacto-detalhe-texto span {
+    color: var(--castanho-suave, #8b6555);
+    font-size: 0.88rem;
+}
+
+.contacto-social {
+    display: flex;
+    gap: 0.7rem;
+}
+
+.contacto-social a {
+    width: 42px;
+    height: 42px;
+    background: var(--branco, #ffffff);
+    border: 1px solid rgba(232,212,196,0.6);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    transition: all 0.25s ease;
+    color: var(--castanho-suave, #8b6555);
+}
+
+.contacto-social a:hover {
+    background: linear-gradient(135deg, #c9857a, #a86059);
+    border-color: transparent;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(201,133,122,0.35);
+}
+
+/* ── FORM (direita) ── */
+.form-pedido {
+    background: var(--branco, #ffffff);
+    border: 1px solid rgba(232,212,196,0.5);
+    border-radius: 28px;
+    padding: 3rem;
+    box-shadow: 0 16px 50px rgba(45,31,26,0.07);
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    animation: fadeInUp 0.6s ease both;
+}
+
+.form-titulo {
+    margin-bottom: 0.5rem;
+}
+
+.form-titulo h3 {
+    font-size: 1.5rem;
+    color: var(--castanho, #2d1f1a);
+    margin-bottom: 0.3rem;
+}
+
+.form-titulo p {
+    color: var(--castanho-suave, #8b6555);
+    font-size: 0.88rem;
+}
+
+/* Grid para campos lado a lado */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-grupo label {
+    font-weight: 600;
+    color: var(--castanho, #2d1f1a);
+    font-size: 0.82rem;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+
+.form-grupo label span {
+    color: var(--rosa, #c9857a);
+    margin-left: 2px;
+}
+
+.form-grupo input,
+.form-grupo select,
+.form-grupo textarea {
+    padding: 0.9rem 1.1rem;
+    border: 1.5px solid rgba(232,212,196,0.8);
+    border-radius: 12px;
+    font-size: 0.95rem;
+    transition: all 0.25s ease;
+    font-family: inherit;
+    background: var(--creme, #f9f4ef);
+    color: var(--castanho, #2d1f1a);
+    outline: none;
+}
+
+.form-grupo input::placeholder,
+.form-grupo textarea::placeholder {
+    color: rgba(139,101,85,0.4);
+}
+
+.form-grupo input:focus,
+.form-grupo select:focus,
+.form-grupo textarea:focus {
+    border-color: var(--rosa, #c9857a);
+    background: var(--branco, #ffffff);
+    box-shadow: 0 0 0 4px rgba(201,133,122,0.1);
+}
+
+.form-grupo select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23c9857a' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+}
+
+.form-grupo textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+.btn-submit {
+    background: linear-gradient(135deg, #c9857a, #a86059);
+    color: #ffffff;
+    padding: 1.1rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0.3rem;
+    letter-spacing: 0.3px;
+    box-shadow: 0 6px 24px rgba(201,133,122,0.35);
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 36px rgba(201,133,122,0.5);
+}
+
+.btn-submit:active { transform: translateY(-1px); }
+
+/* ── MENSAGENS ── */
+.erro-msg {
+    color: #c0392b;
+    font-size: 0.85rem;
+    background: #fdf0ee;
+    padding: 0.8rem 1.1rem;
+    border-radius: 10px;
+    border: 1px solid rgba(192,57,43,0.15);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sucesso-wrap {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+}
+
+.sucesso-msg {
+    text-align: center;
+    background: var(--branco, #ffffff);
+    border: 1px solid rgba(232,212,196,0.5);
+    border-radius: 28px;
+    padding: 4rem 3rem;
+    max-width: 480px;
+    box-shadow: 0 20px 60px rgba(45,31,26,0.08);
+    animation: scaleIn 0.5s ease both;
+}
+
+.sucesso-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    display: block;
+    animation: scaleIn 0.5s ease 0.2s both;
+}
+
+.sucesso-msg h2 {
+    color: var(--sage-escuro, #5e7a59);
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.sucesso-msg p {
+    color: var(--castanho-suave, #8b6555);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+/* ── FALLBACK (layout sem painel info) ── */
+.contacto-container {
+    max-width: 680px;
+    margin: 3rem auto 5rem;
+    padding: 0 2rem;
+}
+
+/* ── RESPONSIVO ── */
+@media (max-width: 800px) {
+    .contacto-layout {
+        grid-template-columns: 1fr;
+        padding: 2rem 1.5rem 0;
+    }
+    .contacto-info { position: static; }
+    .form-pedido { padding: 2rem 1.5rem; }
+    .form-row { grid-template-columns: 1fr; }
+}
+
+/* ── DETALHE WHATSAPP ── */
+.contacto-detalhe-link {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.contacto-detalhe-link:hover {
+    border-color: rgba(37, 211, 102, 0.4) !important;
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.12) !important;
+}
+
+.contacto-detalhe-icon--wa {
+    background: linear-gradient(135deg, rgba(37,211,102,0.15), rgba(37,211,102,0.08)) !important;
+    color: #20b858 !important;
+    border-color: rgba(37,211,102,0.2) !important;
+}
+
+/* ── MAPA ── */
+.contacto-mapa {
+    margin-top: 1.5rem;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(232,212,196,0.5);
+    box-shadow: 0 4px 20px rgba(45,31,26,0.07);
+}
+
+/* ── WHATSAPP ALTERNATIVO NO FORM ── */
+.form-whatsapp-alt {
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--castanho-suave, #8b6555);
+    margin-top: 0.5rem;
+}
+
+.form-whatsapp-alt a {
+    color: #20b858;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    transition: color 0.2s;
+}
+
+.form-whatsapp-alt a:hover { color: #18a04d; }
+
+/* ── BOTÃO WHATSAPP NA PÁGINA DE SUCESSO ── */
+.btn-whatsapp-sucesso {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #25d366;
+    color: #ffffff !important;
+    padding: 0.9rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.92rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(37,211,102,0.35);
+}
+
+.btn-whatsapp-sucesso:hover {
+    background: #20c05a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(37,211,102,0.5);
+}

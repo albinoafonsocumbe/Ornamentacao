@@ -1,0 +1,197 @@
+/* ═══════════════════════════════════════════════
+   SOBRE.CSS
+═══════════════════════════════════════════════ */
+
+.sobre-layout {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 5rem 2rem 6rem;
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 5rem;
+    align-items: start;
+}
+
+/* ── TEXTO PRINCIPAL ── */
+.sobre-texto .sobre-intro {
+    font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--castanho, #2d1f1a);
+    line-height: 1.7;
+    margin-bottom: 3rem;
+    font-style: italic;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(232,212,196,0.6);
+}
+
+.sobre-bloco {
+    margin-bottom: 2.5rem;
+}
+
+.sobre-bloco h2 {
+    color: var(--castanho, #2d1f1a);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.sobre-bloco h2::before {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 24px;
+    background: linear-gradient(180deg, #c9857a, #8a9e85);
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.sobre-bloco p {
+    color: var(--castanho-suave, #8b6555);
+    line-height: 1.9;
+    font-size: 0.95rem;
+}
+
+/* ── LISTA DE VALORES ── */
+.valores-lista {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.valores-lista li {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    color: var(--castanho-med, #5c3d2e);
+    font-size: 0.92rem;
+    padding: 1rem 1.2rem;
+    background: var(--branco, #ffffff);
+    border: 1px solid rgba(232,212,196,0.5);
+    border-radius: 12px;
+    transition: all 0.25s ease;
+}
+
+.valores-lista li:hover {
+    border-color: rgba(201,133,122,0.3);
+    box-shadow: 0 4px 16px rgba(201,133,122,0.08);
+    transform: translateX(4px);
+}
+
+.valores-lista li::before {
+    content: '✦';
+    color: var(--rosa, #c9857a);
+    font-size: 0.7rem;
+    flex-shrink: 0;
+}
+
+/* ── COLUNA LATERAL ── */
+.sobre-sidebar {
+    position: sticky;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Card de stat */
+.sobre-stat-card {
+    background: var(--branco, #ffffff);
+    border: 1px solid rgba(232,212,196,0.5);
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.sobre-stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 40px rgba(201,133,122,0.12);
+    border-color: rgba(201,133,122,0.3);
+}
+
+.sobre-stat-card .stat-num {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--rosa-escuro, #a86059);
+    font-family: 'Playfair Display', serif;
+    line-height: 1;
+    margin-bottom: 0.4rem;
+}
+
+.sobre-stat-card .stat-label {
+    color: var(--castanho-suave, #8b6555);
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+}
+
+/* Card de destaque */
+.sobre-destaque {
+    background: linear-gradient(160deg, var(--castanho, #2d1f1a), var(--castanho-med, #5c3d2e));
+    border-radius: 20px;
+    padding: 2.5rem;
+    color: #f9f4ef;
+    position: relative;
+    overflow: hidden;
+}
+
+.sobre-destaque::before {
+    content: '';
+    position: absolute;
+    top: -30%;
+    right: -20%;
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(201,133,122,0.2) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.sobre-destaque h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    color: #e8b4ae;
+    position: relative;
+    z-index: 1;
+}
+
+.sobre-destaque p {
+    color: rgba(249,244,239,0.65);
+    font-size: 0.88rem;
+    line-height: 1.8;
+    position: relative;
+    z-index: 1;
+}
+
+/* Stats grid na sidebar */
+.sobre-stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+/* ── RESPONSIVO ── */
+@media (max-width: 900px) {
+    .sobre-layout {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .sobre-sidebar {
+        position: static;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .sobre-destaque { flex: 1 1 100%; }
+    .sobre-stat-card { flex: 1 1 calc(50% - 0.5rem); }
+}
+
+@media (max-width: 480px) {
+    .sobre-layout { padding: 3rem 1.5rem 4rem; }
+    .sobre-texto .sobre-intro { font-size: 1.25rem; }
+    .sobre-stats-grid { grid-template-columns: 1fr; }
+    .sobre-stat-card { flex: 1 1 100%; }
+}

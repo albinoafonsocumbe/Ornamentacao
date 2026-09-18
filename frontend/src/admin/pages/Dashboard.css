@@ -1,0 +1,121 @@
+.dash-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.dash-card {
+    background: #ffffff;
+    border: 1px solid #e8d5c4;
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 12px rgba(45,31,26,0.05);
+}
+
+.dash-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(45,31,26,0.1);
+    border-color: #d4b896;
+}
+
+.dash-card-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.dash-card-valor {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2d1f1a;
+    font-family: 'Playfair Display', serif;
+    line-height: 1;
+}
+
+.dash-card-label {
+    display: block;
+    font-size: 0.78rem;
+    color: #8b6555;
+    margin-top: 0.2rem;
+    font-weight: 500;
+}
+
+.dash-secao {
+    background: #ffffff;
+    border: 1px solid #e8d5c4;
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 12px rgba(45,31,26,0.05);
+}
+
+.dash-secao-titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: #2d1f1a;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid #f0e4d4;
+}
+
+.dash-estados {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.dash-estado-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: #f9f4ef;
+    padding: 0.6rem 1rem;
+    border-radius: 10px;
+    border: 1px solid #f0e4d4;
+}
+
+.dash-estado-item strong {
+    font-size: 1.1rem;
+    color: #2d1f1a;
+    font-family: 'Playfair Display', serif;
+}
+
+.dash-acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.dash-acao {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.3rem;
+    background: #f9f4ef;
+    border: 1.5px solid #e8d5c4;
+    border-radius: 50px;
+    color: #5c3d2e;
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.dash-acao:hover {
+    background: linear-gradient(135deg, #c9857a, #a86059);
+    border-color: transparent;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(201,133,122,0.35);
+}
