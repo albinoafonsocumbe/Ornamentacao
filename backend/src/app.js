@@ -75,7 +75,7 @@ app.use(limitadorGeral);
 app.use("/uploads", express.static(path.join(__dirname, "../uploads")));
 
 // ── Rota de saúde ────────────────────────────────
-app.get("/", (req, res) => {
+app.get("/api/health", (req, res) => {
   res.json({ mensagem: "API Ornamentação — Online", versao: "2.0" });
 });
 
